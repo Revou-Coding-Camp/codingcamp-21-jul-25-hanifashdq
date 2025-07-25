@@ -1,0 +1,218 @@
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('../asset/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.todo-container {
+    width: 470px;
+    background-color: #5c21ff;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 20px;
+    border: 1px solid #8400ff;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ebebff;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.todo-icon {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="text"],
+#dateInput {
+    padding: 10px;
+    font-size: 15px;
+    border: 2px solid #ff27b7;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #120931;
+    box-sizing: border-box;
+}
+
+#taskInput {
+    flex: 2;
+    min-width: 0;
+}
+
+#dateInput {
+    width: 130px;
+}
+
+#addTask {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ff27b7;
+    color: #0d1117;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addTask:hover {
+    background-color: #110936;
+}
+
+.button-bar {
+    margin-top: 12px;
+    display: flex;
+    justify-content:right;
+    gap: 10px;
+}
+
+#filterTask {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #00c3ff;
+    color: #000000;
+    border: 1px solid #3700ff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#filterTask:hover {
+    background-color: #262955;
+}
+
+#clearAll {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #ff00ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#deleteAll:hover {
+    background-color: #ff00ff;
+}
+
+#taskTable {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#taskTable th,
+#taskTable td {
+    border: 1px solid #fbff00;
+    padding: 10px;
+    text-align: center;
+}
+
+#taskTable th {
+    background-color: #d9ff2f;
+    color: #0f0868;
+    cursor: pointer;
+}
+
+#taskTable td {
+    background-color: #00d9ff;
+    color: #000000;
+}
+
+.empty-row td {
+    font-style: italic;
+    color: #7976a7;
+    text-align: center;
+}
+
+.task-check {
+    margin-right: 8px;
+}
+
+.task-label {
+    font-size: 16px;
+}
+
+.status-label {
+    font-weight: bold;
+    color: #000000;
+}
+
+/* === 9. TOMBOL HAPUS PER TUGAS === */
+.delete-btn {
+    background-color: #ff0aff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #ff00ff;
+}
+
+/* === 10. RESPONSIVE MODE === */
+@media (max-width: 500px) {
+    .todo-container {
+        width: 100%;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #taskInput,
+    #dateInput,
+    #addTask {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .button-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #filterTask,
+    #deleteAll {
+        width: 100%;
+    }
+
+    #taskTable th,
+    #taskTable td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .delete-btn {
+        width: 100%;
+    }
+}
