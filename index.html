@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="todo-container">
+        <h1>
+            <img src="asset/icon.png" alt="Icon" class="todo-icon">To Do List
+        </h1>
+
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Create your task here..." />
+            <input type="date" id="dateInput" />
+            <button id="addTask">+</button>
+        </div>
+
+        <div class="button-bar">
+            <select id="filterTask">
+                <option value="filter" disabled selected>FILTER</option>
+                <option value="all">All</option>
+                <option value="pending">Incomplete</option>
+                <option value="done">Done</option>
+            </select>
+            <button id="clearAll">CLEAR ALL</button>
+        </div>
+
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th id="sortTask">Task</th>
+                    <th id="sortDate">Due Date</th>
+                    <th id="sortStatus">Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="taskBody">
+                <tr class="empty-row">
+                    <td colspan="4" style="text-align: center;">No task here</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
